@@ -1,0 +1,33 @@
+server:
+  http2:
+    enabled: true
+  port: 8400
+
+jwt.secret:
+  access-token-key: 'bWNzZGpia2F5dXZhc3R5dWZlNTd3NnQ5OHk9NHFmcWhqaWQwOSooXykmKmZ5YndpeW9ha3d1Znk2MzR2dWFvJipeJipGVGd3M2I0ZWhmaDcqSUdeJklZSFhCSVRzZjc2Z2lhdUJYXkZWQUlZVUNCRTd0Y2Y2d2lndXllYmFrR0lXRUNLYXQ2Y2lhdg=='
+  refresh-token-key: 'Q0VXRlVDV0UjR0RmeTYzNHYmMjUzMmVkanNjd2UzdWFvJipeJipGVGd3M2I0ZWhmZnlid2l5b2Frd3VMS1lFXiZtaW9QKE8qVVgoKiZPQ0JVSU5FQ2V5NzZpZ0JLQ0hUU0VGQ15XRWN3dmthNjdlZndhaw=='
+
+logging:
+  level:
+    org.springframework.security: trace
+
+# ===============================
+# DATABASE
+# ===============================
+
+# PostgreSQL
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/db_food_app
+    username: postgres
+    password: Rus1rus1
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        format_sql: true
+    hibernate:
+      ddl-auto: update
